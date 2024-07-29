@@ -1,0 +1,135 @@
+// body {
+//   background-color: #131211;
+//   // height: 100vb;
+//   // width: 100vb;
+// }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 150px;
+}
+
+.brand {
+  font-size: 1.875rem;
+  color: #fff;
+}
+
+.nav-options ul {
+  display: flex;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+
+.nav-options a {
+  padding: 8px;
+  color: #ced4da;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-options a:hover {
+  background-color: #6c757d;
+  color: #fff;
+  opacity: 100%;
+  border-radius: 10%;
+}
+
+.home {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  max-height: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.personal-photo,
+.introduction {
+  flex: 1;
+  max-width: 600px;
+}
+
+.personal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4%;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.introduction {
+  min-height: 400px;
+  margin-left: 50px;
+  padding-left: 50px;
+}
+
+.introduction h1 {
+  font-size: clamp(2rem, 10vw, 4rem);
+  color: #fff;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.introduction ul {
+  padding: 0;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 20px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .nav-options ul {
+    font-size: 0.67rem;
+    gap: 5px;
+  }
+
+  .home {
+    display: block;
+    align-items: center;
+    padding: 0;
+    margin-top: 4rem;
+    height: 100%;
+  }
+
+  .personal-photo {
+    padding: 40px;
+  }
+
+  .personal-photo img {
+    max-width: 500px;
+    max-height: 300px;
+  }
+
+  .introduction {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 0px;
+  }
+
+  .introduction h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 8vw, 5rem);
+  }
+}
