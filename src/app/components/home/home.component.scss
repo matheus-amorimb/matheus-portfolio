@@ -1,9 +1,4 @@
-// body {
-//   background-color: #131211;
-//   // height: 100vb;
-//   // width: 100vb;
-// }
-
+/* Header Styles */
 header {
   display: flex;
   flex-direction: row;
@@ -36,6 +31,17 @@ header {
   border-radius: 10%;
 }
 
+p-sidebar,
+p-button {
+  display: none;
+}
+
+.p-button {
+  background-color: transparent;
+  border: none;
+}
+
+/* Home Section Styles */
 .home {
   padding-top: 150px;
   display: flex;
@@ -47,10 +53,10 @@ header {
   margin: 0 auto;
 }
 
-.personal-photo,
-.introduction {
+.personal-photo {
   flex: 1;
   max-width: 600px;
+  padding: 40px; /* Move padding to this block */
 }
 
 .personal-photo img {
@@ -62,6 +68,8 @@ header {
 }
 
 .introduction {
+  flex: 1;
+  max-width: 600px;
   min-height: 400px;
   margin-left: 50px;
   padding-left: 50px;
@@ -70,8 +78,7 @@ header {
 .introduction h1 {
   font-size: clamp(2rem, 10vw, 4rem);
   color: #fff;
-  margin-bottom: 40px;
-  margin-top: 0px;
+  margin: 0 0 40px 0;
 }
 
 .introduction ul {
@@ -91,7 +98,8 @@ header {
   height: 25px;
 }
 
-@media (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 868px) {
   header {
     padding: 20px 20px;
   }
@@ -100,9 +108,16 @@ header {
     font-size: 1rem;
   }
 
-  .nav-options ul {
-    font-size: 0.67rem;
-    gap: 5px;
+  .nav-options {
+    display: none;
+  }
+
+  p-button,
+  p-sidebar {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
   }
 
   .home {
@@ -113,19 +128,14 @@ header {
     height: 100%;
   }
 
-  .personal-photo {
-    padding: 40px;
-  }
-
   .personal-photo img {
     max-width: 500px;
     max-height: 300px;
   }
 
   .introduction {
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-left: 0px;
+    margin: 0 40px;
+    padding-left: 0;
   }
 
   .introduction h1 {

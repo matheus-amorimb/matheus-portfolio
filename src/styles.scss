@@ -1,16 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+:root {
+  --gray-color-1: #151515;
+  --gray-color-2: #2c2c2c;
+  --gray-color-3: #3b3b3b;
+  --gray-color-4: #4c4c4c;
+  --gray-color-5: #5b5b5b;
+  --gray-color-6: #6b6b6b;
+  --gray-color-7: #7a7a7a;
+  --gray-color-8: #898989;
+  --gray-color-9: #9a9a9a;
+  --gray-color-10: #aaaaaa;
+  --gray-color-11: #b9b9b9;
+  --gray-color-12: #c8c8c8;
+  --gray-color-13: #d7d7d7;
+  --gray-color-14: #f2f2f2;
+  --gray-color-15: #ffffff;
+  --black-color-1: #252525;
+  --black-color-2: #7f8084;
+  --black-color-3: #d7d8da;
+  --black-color-4: #f3f3f3;
+  --purple-color: #5328fe;
+  --section-content-boxed-max-width: 1366px;
+  --section-content-fluid-max-width: 90%;
+  --section-content-mobile-margin: 2rem;
+  --section-container-margin-bottom: 20rem;
+  --section-content-items-margin: 5rem 0;
+  --navbar-height: 8rem;
+}
+
 * {
-  list-style-type: none;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100% !important;
-  margin: 0;
-  padding: 0;
-  font-family: Poppins, serif;
-  font-size: 16px;
-  box-sizing: border-box;
-  background-color: #131211;
+  background-color: var(--gray-color-1);
+  font-size: 8px;
+  font-family: Ubuntu, serif;
 }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 2px solid violet;
+  position: relative;
+}
+
+.section {
+  margin-bottom: 5rem;
+}
+
+// xs
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+// sm
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+// md
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+// lg
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+// xl
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+// // 2xl
+// @media (min-width: 1536px) {
+// }
+
+// // xs
+// @media (min-width: 475px) {
+// }
+
+// // sm
+// @media (min-width: 640px) {
+// }
+
+// // md
+// @media (min-width: 768px) {
+// }
+
+// // lg
+// @media (min-width: 1024px) {
+// }
+
+// // xl
+// @media (min-width: 1280px) {
+// }
+
+// // 2xl
+// @media (min-width: 1536px) {
+// }
