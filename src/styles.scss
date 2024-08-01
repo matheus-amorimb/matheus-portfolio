@@ -90,12 +90,19 @@ button {
   padding-right: 1rem;
   padding-top: 0;
   padding-bottom: 0;
-  border: 2px solid violet;
+  // border: 2px solid violet;
   position: relative;
 }
 
 .section {
   margin-bottom: 5rem;
+}
+
+// xs
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
 }
 
 // xs

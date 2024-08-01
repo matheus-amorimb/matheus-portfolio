@@ -1,145 +1,140 @@
-/* Header Styles */
-header {
+.hero {
+  margin-top: 2rem;
+  height: calc(100vh - var(--navbar-height) - 12rem);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 150px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  gap: 3rem;
 }
 
-.brand {
-  font-size: 1.875rem;
-  color: #fff;
-}
-
-.nav-options ul {
-  display: flex;
-  gap: 20px;
-  font-size: 1.25rem;
-}
-
-.nav-options a {
-  padding: 8px;
-  color: #ced4da;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-options a:hover {
-  background-color: #6c757d;
-  color: #fff;
-  opacity: 100%;
-  border-radius: 10%;
-}
-
-p-sidebar,
-p-button {
-  display: none;
-}
-
-.p-button {
-  background-color: transparent;
-  border: none;
-}
-
-/* Home Section Styles */
-.home {
-  padding-top: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  max-height: 500px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.personal-photo {
-  flex: 1;
-  max-width: 600px;
-  padding: 40px; /* Move padding to this block */
-}
-
-.personal-photo img {
-  width: 100%;
-  height: 100%;
+.hero__img {
+  max-width: 35rem;
   object-fit: cover;
-  border-radius: 4%;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  // padding-bottom: 3rem;
+  border-radius: 0.5rem;
 }
 
-.introduction {
-  flex: 1;
-  max-width: 600px;
-  min-height: 400px;
-  margin-left: 50px;
-  padding-left: 50px;
+.hero__introduction {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 3rem;
+  padding-left: 1rem;
 }
 
-.introduction h1 {
-  font-size: clamp(2rem, 10vw, 4rem);
-  color: #fff;
-  margin: 0 0 40px 0;
+.hero__title {
+  max-width: 40rem;
+  color: var(--black-color-4);
+  text-transform: uppercase;
+  font-size: var(--size-8xl);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
 }
 
-.introduction ul {
-  padding: 0;
+.hero__subtitle {
+  max-width: 40rem;
+  color: var(--black-color-2);
+  font-size: var(--size-6xl);
 }
 
-.social-media {
+.hero__description {
+  max-width: 40rem;
+  color: var(--black-color-4);
+  font-size: var(--size-4xl);
+}
+
+.hero__menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: end;
+  gap: 2rem;
+  list-style: none;
+  padding-right: 1rem;
+  position: relative;
 }
 
-.social-media a {
-  display: flex;
-  align-items: center;
-  width: 25px;
-  height: 25px;
+.hero__menu li {
+  position: relative;
+  z-index: 1;
 }
 
-/* Media Queries */
-@media (max-width: 868px) {
-  header {
-    padding: 20px 20px;
+.hero__menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 0;
+  height: 1.5rem;
+  background-color: var(--black-color-2);
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.hero__menu li:hover::after {
+  width: 130%;
+}
+
+.hero__menu__link img {
+  width: 3rem;
+  height: 3rem;
+}
+
+// xs
+@media (max-height: 667px) {
+  .hero {
+    height: calc(100vh);
+  }
+}
+
+// md
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
   }
 
-  .brand {
-    font-size: 1rem;
+  .hero__img {
+    margin: 0;
   }
 
-  .nav-options {
-    display: none;
+  .hero__title {
+    font-size: var(--size-7xl);
   }
 
-  p-button,
-  p-sidebar {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  .hero__subtitle {
+    font-size: var(--size-6xl);
   }
 
-  .home {
-    display: block;
-    align-items: center;
-    padding: 0;
-    margin-top: 4rem;
-    height: 100%;
+  .hero__description {
+    font-size: var(--size-4xl);
   }
 
-  .personal-photo img {
-    max-width: 500px;
-    max-height: 300px;
+  .hero__menu {
+    justify-content: start;
+  }
+}
+
+// 2xl
+@media (min-width: 1536px) {
+  .hero__img {
+    max-width: 60rem;
   }
 
-  .introduction {
-    margin: 0 40px;
-    padding-left: 0;
+  .hero__title {
+    font-size: var(--size-9xl);
   }
 
-  .introduction h1 {
-    margin-bottom: 20px;
-    font-size: clamp(2rem, 8vw, 5rem);
+  .hero__subtitle {
+    font-size: var(--size-7xl);
+  }
+
+  .hero__description {
+    font-size: var(--size-5xl);
   }
 }

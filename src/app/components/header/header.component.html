@@ -26,6 +26,7 @@
       [(visible)]="isSideBarVisible"
       position="right"
       [fullScreen]="true"
+      *ngIf="isSideBarVisible"
     >
       <ul class="bars__menu">
         <li><a href="#home" class="bars__menu__link">Início</a></li>
