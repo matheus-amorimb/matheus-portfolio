@@ -1,1 +1,125 @@
+.nav-bar {
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 
+.nav-bar__logo {
+  height: var(--size-7xl);
+  width: var(--size-7xl);
+  background-color: var(--gray-color-3);
+  border-radius: 15%;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.nav-bar__logo:hover {
+  transform: rotateY(-180deg);
+}
+
+.nav-bar__menu {
+  display: none;
+}
+
+.nav-bar__bars {
+  color: var(--gray-color-15);
+  height: var(--size-6xl);
+  width: var(--size-6xl);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.p-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-sidebar .p-sidebar-header {
+  justify-content: right;
+  width: 100%;
+  height: auto;
+  padding-right: var(--size-7xl);
+  padding-top: var(--size-7xl);
+}
+
+.p-sidebar-close {
+  color: var(--gray-color-3);
+  width: var(--size-5xl);
+  height: var(--size-5xl);
+}
+
+.p-sidebar-close .p-icon {
+  width: var(--size-5xl);
+  height: var(--size-5xl);
+}
+
+.p-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 33%;
+}
+
+.bars__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 4em;
+}
+
+.bars__menu__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: var(--size-4xl);
+  color: var(--gray-color-4);
+  letter-spacing: -0.05em;
+  transition: color 0.3s;
+}
+
+.bars__menu__link:hover {
+  opacity: 50%;
+}
+
+//md
+@media (min-width: 768px) {
+  .nav-bar__bars {
+    display: none;
+  }
+
+  .nav-bar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4em;
+  }
+
+  .nav-bar__link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: var(--size-4xl);
+    color: var(--gray-color-12);
+    letter-spacing: -0.05em;
+    transition: color 0.3s;
+  }
+
+  .nav-bar__link:hover {
+    opacity: 50%;
+  }
+}
+
+// xl
+@media (min-width: 1280px) {
+  .nav-bar {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}

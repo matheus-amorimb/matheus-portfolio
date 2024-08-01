@@ -1,1 +1,37 @@
-<header class="container header"></header>
+<header class="container header">
+  <nav class="nav-bar">
+    <img class="nav-bar__logo" src="./assets/logos/personal-logo.svg" alt="" />
+    <ul class="nav-bar__menu">
+      <li><a href="#home" class="nav-bar__link">Início</a></li>
+      <li><a href="#about" class="nav-bar__link">Sobre</a></li>
+      <li><a href="#project" class="nav-bar__link">Projetos</a></li>
+    </ul>
+    <button class="nav-bar__bars" (click)="openSideBar()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+    </button>
+    <p-sidebar
+      [(visible)]="isSideBarVisible"
+      position="right"
+      [fullScreen]="true"
+    >
+      <ul class="bars__menu">
+        <li><a href="#home" class="bars__menu__link">Início</a></li>
+        <li><a href="#about" class="bars__menu__link">Sobre</a></li>
+        <li><a href="#project" class="bars__menu__link">Projetos</a></li>
+      </ul>
+    </p-sidebar>
+  </nav>
+</header>
