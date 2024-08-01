@@ -1,0 +1,145 @@
+.about {
+  margin-top: 12rem;
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.about > * {
+  max-width: 50rem;
+}
+
+.about__title {
+  color: var(--black-color-4);
+  text-transform: capitalize;
+  font-size: var(--size-8xl);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  margin-bottom: 5rem;
+}
+
+.about__experiences {
+  margin-bottom: 5rem;
+}
+
+.about__experiences_title {
+  color: var(--black-color-4);
+  font-size: var(--size-5xl);
+  letter-spacing: -0.05em;
+  margin-bottom: 3rem;
+}
+
+.about__experiences_company {
+  color: var(--black-color-4);
+  font-size: var(--size-4xl);
+  margin-bottom: 0.2rem;
+}
+
+data {
+  color: var(--black-color-2);
+  font-size: var(--size-3xl);
+  padding-left: 0.5rem;
+}
+
+.about__experiences_role_title {
+  color: var(--gray-color-12);
+  font-size: var(--size-3xl);
+  margin-bottom: 1.5rem;
+}
+
+.about__experiences_role_desciption {
+  color: var(--gray-color-15);
+  font-size: var(--size-4xl);
+  //text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.about__experiences_stacks {
+  font-size: var(--size-3xl);
+  .title_stack {
+    color: var(--black-color-4);
+    font-weight: 500;
+  }
+
+  .stacks {
+    padding-left: 0.5rem;
+    color: var(--black-color-2);
+  }
+}
+
+.about__skills__title {
+  color: var(--black-color-4);
+  font-size: var(--size-5xl);
+  letter-spacing: -0.05em;
+  margin-bottom: 3rem;
+}
+
+.about__skills__wrapper{
+  margin-bottom: 2rem
+}
+
+.about__skills_domain{
+  color: var(--gray-color-12);
+  font-size: var(--size-3xl);
+  margin-bottom: 1.5rem;
+}
+
+.skill__names{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill__name{
+  background-color: #ffffff;
+  color: var(--gray-color-1);;
+  padding: 0.5rem 2rem;
+  font-size: var(--size-4xl);
+  font-weight: 450;
+  letter-spacing: -0.05em;
+  border-radius: 100px;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill__name:hover{
+  background-color: var(--blue-color-1);
+  color: #ffffff;
+}
+
+// // xs
+ @media (min-width: 400px) {
+   .about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+   }
+ }
+
+// // md
+ @media (min-width: 768px) {
+   .about {
+     padding-left: 2rem;
+     padding-right: 2rem;
+   }
+
+   .about > * {
+     max-width: 100%;
+   }
+
+   .about__wrapper {
+     display: flex;
+     flex-direction: row;
+     align-items: start;
+     justify-content: space-between;
+     gap: 2rem;
+   }
+ }
+
+@media (min-width: 1800px) {
+  .experiences_wrapper {
+    max-width: 55%;
+  }
+}

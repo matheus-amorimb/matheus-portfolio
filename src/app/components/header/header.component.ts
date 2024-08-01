@@ -15,6 +15,10 @@ export class HeaderComponent {
 
   openSideBar() {
     this.isSideBarVisible = true;
-    console.log(this.isSideBarVisible);
   }
+
+  closeSideBar() {
+    this.isSideBarVisible = false;
+  }
+
 }

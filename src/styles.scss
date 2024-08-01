@@ -3,7 +3,7 @@
 @import "primeicons/primeicons.css";
 
 :root {
-  --gray-color-1: #151515;
+  --gray-color-1: #111111;
   --gray-color-2: #2c2c2c;
   --gray-color-3: #3b3b3b;
   --gray-color-4: #4c4c4c;
@@ -22,6 +22,7 @@
   --black-color-2: #7f8084;
   --black-color-3: #d7d8da;
   --black-color-4: #f3f3f3;
+  --blue-color-1: #1c7dec;
 
   --section-content-boxed-max-width: 1366px;
   --section-content-fluid-max-width: 90%;
@@ -61,6 +62,7 @@ body {
   font-size: 8px;
   font-family: "General Sans", sans-serif;
   scroll-behavior: smooth;
+  position: relative;
 }
 
 img,
@@ -95,7 +97,14 @@ button {
 }
 
 .section {
-  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background-color: var(--gray-color-1);
 }
 
 // xs

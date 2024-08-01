@@ -14,7 +14,11 @@
   object-fit: cover;
   margin: 0 auto;
   // padding-bottom: 3rem;
-  border-radius: 0.5rem;
+  border-radius: 5%;
+}
+
+.blue {
+  color: var(--blue-color-1);
 }
 
 .hero__introduction {
@@ -70,7 +74,7 @@
   left: 0;
   width: 0;
   height: 1.5rem;
-  background-color: var(--black-color-2);
+  background-color: #0077b6;
   transition: width 0.3s ease-in-out;
   z-index: -1;
 }
@@ -97,6 +101,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    height: calc(100vh - var(--navbar-height) - 2rem);
   }
 
   .hero__img {
