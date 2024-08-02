@@ -1,37 +1,37 @@
-<section class="container about" id="about">
+<section class="container about">
   <h1 class="about__title">Sobre mim</h1>
   <div class="about__wrapper">
     <div class="experiences_wrapper">
       <h2 class="about__experiences_title">Experiências</h2>
       @for (experience of experiences; track experience.id){
-        <div class="about__experiences">
-          <h3 class="about__experiences_company">
-            {{ experience.company }} <data>{{ experience.dataStart }} - {{ experience.dataEnd }}</data>
-          </h3>
-          <h4 class="about__experiences_role_title">{{ experience.role }}</h4>
-          <p class="about__experiences_role_desciption">
-            {{experience.description}}
-          </p>
-          <p class="about__experiences_stacks">
-            <span class="title_stack">Stack:</span>
-            <span class="stacks">{{ experience.stacks }}</span>
-          </p>
-        </div>
+      <div class="about__experiences">
+        <h3 class="about__experiences_company">
+          {{ experience.company }}
+          <data>{{ experience.dataStart }} - {{ experience.dataEnd }}</data>
+        </h3>
+        <h4 class="about__experiences_role_title">{{ experience.role }}</h4>
+        <p class="about__experiences_role_desciption">
+          {{ experience.description }}
+        </p>
+        <p class="about__experiences_stacks">
+          <span class="title_stack">Stack:</span>
+          <span class="stacks">{{ experience.stacks }}</span>
+        </p>
+      </div>
       }
     </div>
     <div class="skills_wrapper">
       <h2 class="about__skills__title">Habilidades</h2>
       @for (skill of skills; track skill.id){
-        <div class="about__skills__wrapper">
-          <h3 class="about__skills_domain">{{ skill.domain }}</h3>
-            <div class="skill__names">
-            @for (tech of skill.technologies; track tech){
-                <p class="skill__name">{{tech}}</p>
-            }
-            </div>
+      <div class="about__skills__wrapper">
+        <h3 class="about__skills_domain">{{ skill.domain }}</h3>
+        <div class="skill__names">
+          @for (tech of skill.technologies; track tech){
+          <p class="skill__name">{{ tech }}</p>
+          }
         </div>
+      </div>
       }
     </div>
   </div>
-
 </section>

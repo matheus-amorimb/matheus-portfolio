@@ -9,6 +9,27 @@
   gap: 3rem;
 }
 
+// .img__wrapper {
+//   position: relative;
+// }
+
+// .img__wrapper::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   max-width: 35rem;
+//   height: 100%;
+//   background-color: rgba(14, 13, 13, 0.219);
+//   z-index: 1;
+//   transition: background-color 0.3s;
+//   border-radius: 10px;
+// }
+
+// // .img__wrapper:hover::after {
+// //   background-color: rgba(107, 107, 107, 0.1);
+// // }
+
 .hero__img {
   max-width: 35rem;
   object-fit: cover;
@@ -74,7 +95,7 @@
   left: 0;
   width: 0;
   height: 1.5rem;
-  background-color: #0077b6;
+  background-color: var(--blue-color-1);
   transition: width 0.3s ease-in-out;
   z-index: -1;
 }

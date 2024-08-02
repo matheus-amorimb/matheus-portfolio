@@ -7,6 +7,7 @@
   align-content: center;
   padding-left: 2rem;
   padding-right: 2rem;
+  scroll-margin-top: 60px;
 }
 
 .about > * {
@@ -103,6 +104,8 @@ data {
   border-radius: 10px;
   margin-right: 1rem;
   margin-bottom: 1.5rem;
+  transition: background-color 0.4s ease-in-out;
+  transition: color 0.3s;
 }
 
 .skill__name:hover {
@@ -135,6 +138,12 @@ data {
     align-items: start;
     justify-content: space-between;
     gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about__title {
+    margin-bottom: 12rem;
   }
 }
 

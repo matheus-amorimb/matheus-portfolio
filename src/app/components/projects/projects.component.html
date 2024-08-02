@@ -1,31 +1,30 @@
 <section class="container projects">
   <h1 class="projects__title">Projetos</h1>
-  <a
-    class="project__link"
-    href="https://github.com/matheus-amorimb/simplified-payment-app"
-    target="_blank"
-  >
-    <div class="img__wrapper">
-      <img class="projects__img" src="/assets/images/picpay-logo.jpg" alt="" />
+  @for (project of projects; track project.id) {
+  <div class="project__container">
+    <div class="projects__img__container">
+      <a class="project__link" href="{{ project.link }}" target="_blank">
+        <div class="img__wrapper">
+          <img class="projects__img" src="{{ project.img }}" alt="" />
+        </div>
+      </a>
     </div>
-  </a>
-  <div class="projects__technologies_wrapper">
-    <p class="projects__technologies">.NET Core</p>
-    <p class="projects__technologies">PostgreSQL</p>
-    <p class="projects__technologies">RabbitMQ</p>
-    <p class="projects__technologies">JWT</p>
-    <p class="projects__technologies">Microservices</p>
+    <div class="projects__info__container">
+      <div class="projects__technologies_wrapper">
+        @for (tech of project.technologies; track projects) {
+        <p class="projects__technologies">{{ tech }}</p>
+        }
+      </div>
+      <a
+        class="project__link project__title"
+        href="https://github.com/matheus-amorimb/simplified-payment-app"
+      >
+        {{ project.title }}
+      </a>
+      <p class="project__description">
+        {{ project.description }}
+      </p>
+    </div>
   </div>
-  <a
-    class="project__link project__title"
-    href="https://github.com/matheus-amorimb/simplified-payment-app"
-  >
-    Plataforma de Pagamentos Simplificada usando Mensageria
-  </a>
-  <p class="project__description">
-    Aplicação back-end de uma plataforma de pagamentos simplificada que possui
-    funcionalidades de cadastro, login, transação. Além disso, conecta-se a dois
-    outros serviços, um de mensageria responsável por encaminhar e-mail aos
-    clientes e outro que verifica a validade da transação.
-  </p>
+  }
 </section>
