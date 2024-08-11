@@ -95,6 +95,7 @@ data {
 
 .skill__name {
   background-color: #ffffff;
+  text-transform: capitalize;
   color: var(--gray-color-1);
   padding: 0.5rem 2rem;
   font-size: var(--size-4xl);
